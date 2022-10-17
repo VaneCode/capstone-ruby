@@ -14,4 +14,9 @@ describe MusicAlbum do
     expect(@music_album.can_be_archived?).to be false
   end 
 
+ it 'can_be_archived if it is avilable on spotify' do
+      expect(music_album3.can_be_archived?).to eq(false)
+    end
+   
+
 end

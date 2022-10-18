@@ -14,5 +14,10 @@ class Genre
     item.genre = self
   end
 
-  
+   def list_genres
+    puts 'List of Genres'
+    @genres.each do |genre|
+      puts "#{@genres.index(genre) + 1}): #{genre.name}"
+    end
+  end
 end

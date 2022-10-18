@@ -6,3 +6,7 @@ create table music_albums(
   on_spotify boolean
 );
 
+-- Create genres table
+create table genres(
+  
+);

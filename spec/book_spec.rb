@@ -3,7 +3,7 @@ require_relative '../app/label'
 
 describe Book do
   before :each do
-    @book = Book.new(publisher: 'Pinguin Readers', cover_state: 'bad', publish_date: '2018-01-20', archived: false)
+    @book = Book.new(publisher: 'Pinguin Readers', cover_state: 'bad', publish_date: '2018-01-20')
     @label = Label.new(id: nil, name: 'Cookie')
     @label.add_item(@book)
   end
@@ -18,6 +18,10 @@ describe Book do
 
   it 'Method getter for cover_state should return bad' do
     expect(@book.cover_state).to eql 'bad'
+  end
+
+  it 'Label for book has to be Cookie' do
+    expect(@book.label.name).to eql 'Cookie'
   end
 
   it 'Method can_use_services? should return true because cover_state is equal to bad' do

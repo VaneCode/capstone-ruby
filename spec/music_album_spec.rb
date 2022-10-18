@@ -2,7 +2,7 @@ require_relative '../app/music_album'
 
 describe MusicAlbum do
   before :each do
-    @music = MusicAlbum.new('2010-01-01', true)
+    @music = MusicAlbum.new(on_spotify: true, publish_date: '2010-01-01' )
   end
 
   it 'is an example of MusicAlbum and takes 2 parameter' do

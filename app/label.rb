@@ -3,12 +3,13 @@ require 'set'
 require_relative 'item'
 
 class Label
-  attr_accessor :name
+  attr_accessor :title, :color
   attr_reader :id, :items
 
-  def initialize(id:, name:)
+  def initialize(id:, title:, color:)
     @id = id || SecureRandom.random_number(1000)
-    @name = name
+    @title = title
+    @color = color
     @items = []
   end
 

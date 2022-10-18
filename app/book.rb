@@ -12,9 +12,12 @@ class Book < Item
   def can_be_archieved?
     super || cover_state == 'bad'
   end
-end
 
-book = Book.new(publisher: 'Pinguin Readers', cover_state: 'bad', publish_date: '2018-01-20')
-puts book.archived
-book.move_to_archive
-puts book.archived
+  def self.list_books(things)
+    things.each_with_index do |thing, idx|
+      if thing.instance_of? Book
+        puts "[#{idx + 1}] #{book.label.title} by #{book.author.first_name} #{book.author.last_name} has been published by #{book.publisher} on #{book.publish_date}"
+      end
+    end
+  end
+end

@@ -17,6 +17,4 @@ describe MusicAlbum do
     expect(@music.on_spotify).to eq(true)
   end
 
-  
-
 end

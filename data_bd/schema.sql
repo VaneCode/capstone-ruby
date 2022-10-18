@@ -8,5 +8,6 @@ create table music_albums(
 
 -- Create genres table
 create table genres(
-  
+  id serial not null primary key,
+  name varchar(100)
 );

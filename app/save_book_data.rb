@@ -3,7 +3,7 @@ require_relative 'book'
 require_relative 'label'
 
 class SaveBookData
-  DATA_DIRECTORY = '../data_json/'.freeze
+  DATA_DIRECTORY = './data_json/'.freeze
 
   def self.label_to_object(label)
     Label.new(id: label['id'], title: label['title'], color: label['color'])

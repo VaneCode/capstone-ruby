@@ -9,7 +9,7 @@ module SaveData
 
     File.write('./data/musics.json', JSON.generate(save_music))
   end
-  
+
   def save_genre(genres)
     save_genres = []
     genres.each do |genre|

@@ -24,7 +24,7 @@ class Book < Item
     puts 'Please insert the new book\'s information'
     # Book
     print 'Publisher:'
-    publisher = gets.chomp
+    publisher = gets.chomp.capitalize
     print 'Publishing date [0000-00-00]: '
     published_date = gets.chomp
     print "Cover's state [good/bad]: "

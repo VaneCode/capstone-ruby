@@ -1,0 +1,26 @@
+[
+  {
+    "id": 733,
+    "publish_date": "2004-03-30",
+    "cover_state": "good",
+    "publisher": "trilce",
+    "archived": false,
+    "label": {
+      "id": 495,
+      "title": "Little wing",
+      "color": "orange"
+    }
+  },
+  {
+    "id": 179,
+    "publish_date": "2013-01-24",
+    "cover_state": "good",
+    "publisher": "aquilar",
+    "archived": false,
+    "label": {
+      "id": 635,
+      "title": "Guia para un perro feliz",
+      "color": "white-blue"
+    }
+  }
+]

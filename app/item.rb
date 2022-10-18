@@ -1,5 +1,8 @@
 require 'securerandom'
 require 'time'
+require_relative 'label'
+require_relative 'genre'
+require_relative 'author'
 class Item
   attr_reader :id, :genre, :author, :label, :archived
   attr_accessor :publish_date

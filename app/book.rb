@@ -19,7 +19,7 @@ class Book < Item
     end
   end
 
-  def self.create_book(book)
+  def self.add_book(books)
     # Ask for the book's information
     puts 'Please insert the new book\'s information'
     # Book
@@ -37,7 +37,7 @@ class Book < Item
     # Create and add the book
     book = Book.new(publisher: publisher, cover_state: cover_state, publish_date: published_date)
     @label = Label.new(title: title, color: color)
-    @label.add_item(@book)
+    @label.add_item(book)
     books << book
     puts "The book #{book.label.title} has been added successfully."
   end

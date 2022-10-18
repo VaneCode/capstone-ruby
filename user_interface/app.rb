@@ -1,8 +1,6 @@
 require_relative '../app/book'
 require_relative '../app/music_album'
 require_relative '../app/game'
-require_relative '../app/label'
-require_relative '../app/save_book_data'
 require_relative 'options'
 
 class App

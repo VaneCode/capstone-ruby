@@ -1,11 +1,10 @@
-require_relative '../item'
+require_relative 'item'
 
 class MusicAlbum < Item
-  attr_accessor :on_spotify
+  attr_accessor :on_spotify, :public_date
 
-  def initialize(on_spotify: ,
-    publish_date:)
-    super(publish_date: publish_date)
+  def initialize( publish_date, on_spotify)
+    super(publish_date)
     @on_spotify = on_spotify
   end
 
@@ -13,17 +12,17 @@ class MusicAlbum < Item
     true if super() && @on_spotify
   end
 
-   def create_album
+  def create_album
     puts 'Great! create your music!'
     puts 'Enter the music publish date: '
     publish_date = gets.chomp
-    puts 'Is it on spotify? [y/n]: '
+    puts 'Is it on spotify? [yes/no]: '
     on_userchoice = gets.chomp
 
     case on_userchoice
-    when 'y'
+    when 'yes'
       on_spotify = true
-    when 'n'
+    when 'no'
       on_spotify = false
     else
       puts 'That was an invalid option'
@@ -35,12 +34,9 @@ class MusicAlbum < Item
   end
 
   def list_albums
-      puts 'List of Albums'
-      @music_album.each do |album|
-        puts "Publish_date: #{album.publish_date}  on_spotify: #{album.on_spotify}"
-      end
+    puts 'List of Albums'
+    @music_album.each do |album|
+      puts "Publish_date: #{album.publish_date}  on_spotify: #{album.on_spotify}"
     end
-
-
+  end
 end
-

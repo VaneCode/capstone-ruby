@@ -1,4 +1,4 @@
-require_relative './musicalbum'
+require_relative './music_album'
 
 class Genre
   attr_accessor :items, :name, :id
@@ -8,13 +8,13 @@ class Genre
     @name = name
     @items = []
   end
-  
+
   def add_item(item)
     @items << item
     item.genre = self
   end
 
-   def list_genres
+  def list_genres
     puts 'List of Genres'
     @genres.each do |genre|
       puts "#{@genres.index(genre) + 1}): #{genre.name}"
@@ -27,5 +27,4 @@ class Genre
     @genres << Genre.new(music_genre)
     save_genre(@genres)
   end
-
 end

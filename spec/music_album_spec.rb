@@ -5,7 +5,7 @@ describe MusicAlbum do
     @music = MusicAlbum.new('2010-01-01', true)
   end
 
-  it 'is an example of MusicAlbum and takes 3 parameter' do
+  it 'is an example of MusicAlbum and takes 2 parameter' do
     expect(@music).to be_instance_of(MusicAlbum)
   end
 

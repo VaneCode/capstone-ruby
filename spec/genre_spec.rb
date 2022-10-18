@@ -9,4 +9,8 @@ describe Genre do
   it 'has a name' do
     expect(@genre.name).to eq('Fantasy')
   end
+
+  it 'add genre items' do
+    expect(@genre.items).to eq([])
+  end
 end

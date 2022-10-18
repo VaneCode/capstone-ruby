@@ -22,7 +22,7 @@ class Book < Item
   def self.create_book(things)
     # Ask for the book's information
     puts 'Please insert the new book\'s information'
-    print "Publisher:"
+    print 'Publisher:'
     publisher = gets.chomp
     print 'Publishing date [0000-00-00]: '
     published_date = gets.chomp

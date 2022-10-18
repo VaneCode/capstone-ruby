@@ -10,7 +10,12 @@ describe Genre do
     expect(@genre.name).to eq('Fantasy')
   end
 
-  it 'add genre items' do
+  it 'is able to add items' do
+    @genre.add_item(Item.new('2000-01-01'))
+    expect(@genre.items.length).to eq(1)
+  end
+
+  it 'contains added genre items' do
     expect(@genre.items).to eq([])
   end
 end

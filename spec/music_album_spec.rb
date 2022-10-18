@@ -9,12 +9,7 @@ describe MusicAlbum do
     expect(@music).to be_instance_of(MusicAlbum)
   end
 
-  # it 'can be archived if the date of publish is the same' do
-  #   @music_album = MusicAlbum.new('2018-01-01', false)
-  #   expect(@music_album.can_be_archived?).to eq(false)
-  # end
-
-  it 'can_be_archived if it is avilable on spotify' do
+   it 'can_be_archived if it is avilable on spotify' do
     expect(@music.can_be_archived?).to eq(true)
   end
 

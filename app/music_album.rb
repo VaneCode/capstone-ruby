@@ -14,6 +14,7 @@ class MusicAlbum < Item
   end
 
    def create_album
+    puts 'Great! create your music!'
     puts 'Enter the music publish date: '
     publish_date = gets.chomp
     puts 'Is it on spotify? [y/n]: '
@@ -24,6 +25,9 @@ class MusicAlbum < Item
       on_spotify = true
     when 'n'
       on_spotify = false
+    else
+      puts 'That was an invalid option'
+      puts ''
     end
 
     @music_album << MusicAlbum.new(publish_date, on_spotify)

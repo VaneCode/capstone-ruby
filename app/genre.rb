@@ -23,9 +23,9 @@ class Genre
 
   def create_genres
     puts 'Enter the genre name: '
-    name = gets.chomp
-    @genres << Genre.new(name)
+    music_genre = gets.chomp
+    @genres << Genre.new(music_genre)
     save_genre(@genres)
   end
-  
+
 end

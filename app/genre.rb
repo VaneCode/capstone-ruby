@@ -20,4 +20,12 @@ class Genre
       puts "#{@genres.index(genre) + 1}): #{genre.name}"
     end
   end
+
+  def create_genres
+    puts 'Enter the genre name: '
+    name = gets.chomp
+    @genres << Genre.new(name)
+    save_genre(@genres)
+  end
+  
 end

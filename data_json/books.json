@@ -22,5 +22,17 @@
       "title": "Guia para un perro feliz",
       "color": "white-blue"
     }
+  },
+  {
+    "id": 158,
+    "publish_date": "2018-04-17",
+    "cover_state": "good",
+    "publisher": "Pinguin readers",
+    "archived": false,
+    "label": {
+      "id": 2,
+      "title": "Coding",
+      "color": "black"
+    }
   }
 ]

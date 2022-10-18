@@ -26,12 +26,12 @@ class Item
   end
 
   def move_to_archive
-    @archived = true if can_be_archieved?
+    @archived = true if can_be_archived?
   end
 
   private
 
-  def can_be_archieved?
+  def can_be_archived?
     temp_date = Time.parse(@publish_date)
     Time.new.year - temp_date.year > 10
   end

@@ -18,12 +18,16 @@ class Label
     item.add_label(self)
   end
 
-  def list_labels(books)
-    labels = Set.new
-    books.each { |book| labels << book.label }
-    puts "You have #{labels.size} labels:"
-    labels.each_with_index do |label, index|
-      puts "#{index + 1} Label: #{label.name}"
+  def self.list_labels(books)
+    if books.empty?
+      puts "You don't have labels at this moment."
+    else
+      labels = Set.new
+      books.each { |book| labels << book.label }
+      puts "You have #{labels.size} labels:"
+      labels.each_with_index do |label, index|
+        puts "#{index + 1} Label: Title #{label.title}, color #{label.color}"
+      end
     end
   end
 end

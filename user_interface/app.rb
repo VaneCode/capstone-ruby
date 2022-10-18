@@ -1,6 +1,7 @@
 require_relative '../app/book'
 require_relative '../app/music_album'
 require_relative '../app/game'
+require_relative '../app/label'
 require_relative 'options'
 
 class App
@@ -18,7 +19,7 @@ class App
     when 2 then Music_Album.list_albums(@music_albums)
     when 3 then Movie.list_movies(@movies)
     when 4 then puts 'list all genres'
-    when 5 then puts 'list all labels'
+    when 5 then Label.list_labels(@books)
     when 6 then puts 'list all authors'
     when 7 then Book.add_book(@books)
     when 8 then Music_Album.add_book(@music_albums)

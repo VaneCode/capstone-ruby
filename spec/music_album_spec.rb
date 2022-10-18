@@ -6,7 +6,7 @@ describe MusicAlbum do
   end
 
   it 'is an example of MusicAlbum and takes 3 parameter' do
-      expect(music_album).to be_instance_of(MusicAlbum)
+      expect(@music).to be_instance_of(MusicAlbum)
     end
 
   it 'can be archived if the date of publish is the same' do
@@ -15,7 +15,7 @@ describe MusicAlbum do
   end 
 
  it 'can_be_archived if it is avilable on spotify' do
-      expect(music_album3.can_be_archived?).to eq(false)
+      expect(@music.can_be_archived?).to eq(false)
     end
    
 

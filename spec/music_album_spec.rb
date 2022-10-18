@@ -17,4 +17,11 @@ describe MusicAlbum do
   it 'can_be_archived if it is avilable on spotify' do
     expect(@music.can_be_archived?).to eq(true)
   end
+
+  it 'creates a new music album insance' do
+    expect(@music.on_spotify).to eq(true)
+  end
+
+  
+
 end

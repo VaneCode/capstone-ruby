@@ -9,13 +9,13 @@ class Book < Item
     @cover_state = cover_state
   end
 
-  def can_be_archieved?
-    super || cover_state == 'bad'
-  end
-
   def self.list_books(books)
-    books.each_with_index do |book, idx|
-      puts "#{idx + 1}: #{book.label.title}, publisher #{book.publisher} on #{book.publish_date}"
+    if books.empty?
+      puts "You don't have books at this moment."
+    else
+      books.each_with_index do |book, idx|
+        puts "#{idx + 1}: #{book.label.title}, publisher #{book.publisher} on #{book.publish_date}"
+      end
     end
   end
 
@@ -40,5 +40,11 @@ class Book < Item
     @label.add_item(@book)
     books << book
     puts "The book #{book.label.title} has been added successfully."
+  end
+
+  private
+
+  def can_be_archieved?
+    super || cover_state == 'bad'
   end
 end

@@ -38,4 +38,26 @@ class SaveBookData
       label: label_to_json(book.label)
     }
   end
+
+  # Read rentals
+  def self.read_books(books)
+    path = "#{DATA_DIRECTORY}books.json"
+    return unless File.exist?(path)
+
+    books_file = File.open(path)
+    JSON.parse(books_file.read).each do |book|
+      books << book_to_object(book)
+    end
+  end
+
+  # Write rentals
+  def self.write_books(books)
+    return if books.empty?
+
+    path_file = "#{DATA_DIRECTORY}books.json"
+    data_books = books.map do |book|
+      book_to_json(book)
+    end
+    File.write(path_file, JSON.pretty_generate(data_books))
+  end
 end

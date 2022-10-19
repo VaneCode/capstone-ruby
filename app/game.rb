@@ -21,10 +21,8 @@ class Game < Item
     multiplayer = gets.chomp
     print 'Enter the when last played'
     last_played_at = gets.chomp
-    game = Game.new(name: name, publish_date, multiplayer, last_played_at)
-    # 
+    game = Game.new(name: name, publish_date: publish_date, multiplayer: multiplayer, last_played_at: last_played_at)
     games << game
-    
   end
 
   def self.list_all_games(games)
@@ -44,5 +42,4 @@ class Game < Item
     super && Date.today - Date.parse(@last_played) > 2 * 365
   end
 end
-game = Game.new(name: 'Solatire', publish_date: '2022/10/9', multiplayer: true, last_played_at: '2018/10/10')
-puts game.publish_date
+

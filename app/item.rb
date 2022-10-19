@@ -31,7 +31,8 @@ class Item
 
   private
 
-  def can_be_archived?()
+
+ def can_be_archived?
     temp_date = Time.parse(@publish_date)
     Time.new.year - temp_date.year > 10
   end

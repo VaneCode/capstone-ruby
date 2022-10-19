@@ -1,4 +1,3 @@
-# require_relative './music_album'
 require './app/save_music_album_data'
 require './app/item'
 

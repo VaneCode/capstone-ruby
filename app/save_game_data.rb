@@ -1,16 +1,18 @@
 require 'json'
 
 module SaveGame
-    def save_game(games)
-        save_game = []
+    def self.save_game(games)
+        game_json = []
         games.each do |game|
-          save_game << { 'name:' => games.name, 'publish_date:' => games.publish_date
-          'mutiplayer:' => games.multiplayer  'last_played_at: ' => games.last_played_at }
+          save_game  = { name: games.name, publish_date: games.publish_date
+           mutiplayer: games.multiplayer  last_played_at: games.last_played_at }
+        game_json << save_game
         end
-        File.write('./data/games.json', JSON.generate(save_game))
+        File.write('./data/games.json', JSON.generate(game_json))
     end
 
-    def save_authors
+
+    def self.save_authors
         author_save = []
    @authors.each do |author|
        author << {
@@ -19,7 +21,7 @@ module SaveGame
        Games: author.items.map do |game|
            {
                name: game.multiplayer,
-               last_played_at: game.last_played_at
+               last_played_at: game.last_played_at,
                publish_date: game.publish_date
            }
          end

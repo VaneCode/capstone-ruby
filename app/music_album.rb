@@ -1,10 +1,6 @@
 require_relative 'item'
-<<<<<<< HEAD
-require 'genre'
-=======
 require './app/save_music_album_data'
 require './app/genre'
->>>>>>> efc247bc9550a61d3eefaad040dd11db533d4feb
 
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date

@@ -24,6 +24,12 @@ module SaveGame
            }
          end
        }
+    end 
+    write_json(author, 'authors.json')
+ end
+ 
+ 
 
+      
 
 end

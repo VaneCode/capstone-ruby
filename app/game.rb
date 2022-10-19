@@ -11,6 +11,7 @@ class Game < Item
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
+  
   def self.add_game(games)
     print 'Please enter the name of the game'
     name = gets.chomp

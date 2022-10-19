@@ -39,15 +39,14 @@ module SaveGame
 end
 
  def read_author 
-    file = read_json(authors.json)
+    file = JSON.parse(File.read(author.json))
     file.each do |author|
         author = Author.new(author['first_name'])
         author.last_name = author['last_name']
         author.items = author ['games'].map do |game|
-        Game.new(game['name'], game['last_played_at'], game ['publish_date'])
-     
- end
-
-      
+        game = Game.new(game['name'], game['last_played_at'], game ['publish_date'])
+        author.json << game
+      author.json << author
+ end   
 
 end

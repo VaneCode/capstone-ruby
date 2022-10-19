@@ -1,5 +1,5 @@
 
-Create Table games (
+Create Table Game (
     id serial PRIMARY KEY
     name VARCHAR(50),
     multiplayer BOOLEAN

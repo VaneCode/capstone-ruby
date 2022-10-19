@@ -11,6 +11,7 @@ class App
   def initialize
     @books = []
     @music_albums = []
+    @genres = []
     @movies = []
   end
 
@@ -18,12 +19,14 @@ class App
     SaveBookData.read_books(@books)
     # SaveAlbumData.read_music_albums(@music_albums)
     # SaveGameData.read_games(@games)
+    # read genres
   end
 
   def save_data
     SaveBookData.write_books(@books)
     # SaveAlbumData.write_music_albums(@music_albums)
     # SaveGameData.write_games(@games)
+    # save_genre(@genres)
   end
 
   def run_choice(choice)

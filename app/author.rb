@@ -23,7 +23,11 @@ class Author
       new(first_name, last_name)
     end
   
-    
+    def self.list_all_authors (first_name, last_name)
+      @authors.each do |author|
+          puts "First_name: \"#{authors.first_name}\" Last_name: #{authors.last_name}"
+      end
+    end  
   
     
   end

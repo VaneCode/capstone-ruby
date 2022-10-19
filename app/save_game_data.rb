@@ -8,7 +8,7 @@ module SaveGame
            mutiplayer: game.multiplayer,  last_played_at: game.last_played_at }
         game_json << save_game
         end
-        File.write('./app/games.json', JSON.generate(game_json))
+        File.write('games.json', JSON.generate(game_json))
     end
 
 
@@ -27,18 +27,19 @@ module SaveGame
          end
        }
     end 
-    File.write('./data/author.json', JSON.generate(author_save))
+    File.write('author.json', JSON.generate(author_save))
  end
+
  def read_game(games)
-    return books unless File.exist?('./app/game.json')
-   gamearr = JSON.parse(File.read('./app/game.json'))
+    return books unless File.exist?('game.json')
+   gamearr = JSON.parse(File.read('game.json'))
    gamearr.each do |game|
     game_json = Game.new(game['name'], game ['publish_date'], game['multiplayer'], game['last_played_at'])
     games << game_json
    end
 end
 
- def read_author 
+ def read_author (author, games)
     file = JSON.parse(File.read(author.json))
     file.each do |author|
         author = Author.new(author['first_name'])
@@ -48,5 +49,5 @@ end
         author.json << game
       author.json << author
  end   
-
+end 
 end

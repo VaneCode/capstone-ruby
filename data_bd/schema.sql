@@ -6,6 +6,7 @@ Create Table games (
     last_played_At DATE 
     publish_date DATE
     Archived BOOLEAN
+    item_id INT FOREIGN KEY REFERENCE item(id)
 )
 
 Create Table author (

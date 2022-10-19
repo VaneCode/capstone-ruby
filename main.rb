@@ -1,4 +1,4 @@
-require_relative './ui/app'
+require_relative './user_interface/app'
 
 def main
   app = App.new

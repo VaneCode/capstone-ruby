@@ -21,8 +21,10 @@ class Game < Item
     multiplayer = gets.chomp
     print 'Enter the when last played'
     last_played_at = gets.chomp
-    game = Game.new(name, publish_date, multiplayer, last_played_at)
+    game = Game.new(name: name, publish_date, multiplayer, last_played_at)
+    # 
     games << game
+    
   end
 
   def self.list_all_games(games)

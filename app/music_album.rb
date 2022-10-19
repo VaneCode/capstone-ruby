@@ -1,4 +1,5 @@
 require_relative 'item'
+require 'genre'
 
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date
@@ -12,12 +13,12 @@ class MusicAlbum < Item
     true if super() && @on_spotify
   end
 
-  def create_album
+  def create_album(music_albums, genres)
     puts 'Great! create your music!'
-    puts 'Enter the music publish date: '
-    publish_date = gets.chomp
+    puts 'Enter the music publish date [0000-00-00]:'
+    publish_date = gets.chomp '2001-01-23'
     puts 'Is it on spotify? [yes/no]: '
-    on_userchoice = gets.chomp
+    on_userchoice = gets.chomp 'yes'
 
     case on_userchoice
     when 'yes'
@@ -28,9 +29,11 @@ class MusicAlbum < Item
       puts 'That was an invalid option'
       puts ''
     end
-
-    @music_album << MusicAlbum.new(publish_date, on_spotify)
-    save_music(@music_album)
+    new_genre = Genre.create_genre(genres)
+    album = MusicAlbum.new(publish_date: publish_date, on_spotify: on_spotify)
+    new_genre.add_item(album)
+    music_albums << album
+    puts 'Your music has been created successfully.'
   end
 
   def list_albums

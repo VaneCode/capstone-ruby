@@ -38,7 +38,7 @@ class App
     when 5 then Label.list_labels(@books)
     when 6 then puts 'list all authors'
     when 7 then Book.add_book(@books)
-    when 8 then Music_Album.add_book(@music_albums)
+    when 8 then MusicAlbum.create_album(@music_albums, @genres)
     when 9 then Game.add_game(@game)
     when 10
       puts 'Bye ;)'

@@ -27,6 +27,7 @@ class App
     # SaveAlbumData.write_music_albums(@music_albums)
     # SaveGameData.write_games(@games)
     # save_genre(@genres)
+    # save_music(@music_album)
   end
 
   def run_choice(choice)

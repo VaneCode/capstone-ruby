@@ -1,4 +1,6 @@
 require_relative 'item'
+require './app/save_music_album_data'
+require './app/genre'
 
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date
@@ -12,7 +14,7 @@ class MusicAlbum < Item
     true if super() && @on_spotify
   end
 
-  def create_album
+  def create_album(music_albums , genres)
     puts 'Great! create your music!'
     puts 'Enter the music publish date: '
     publish_date = gets.chomp
@@ -29,8 +31,15 @@ class MusicAlbum < Item
       puts ''
     end
 
-    @music_album << MusicAlbum.new(publish_date, on_spotify)
-    save_music(@music_album)
+    music_albums << MusicAlbum.new( on_spotify, publish_date)
+    genre = Genre.create_genre(genres)
+
+    album = MusicAlbum.new(on_spotify, publish_date: '2010-01-01')
+    music_albums << album
+    genre = Genre.new
+    genre.add_item(album)
+
+
   end
 
   def list_albums

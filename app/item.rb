@@ -9,6 +9,7 @@ class Item
 
   def initialize(publish_date:, archived: false, id: nil)
     @id = id || SecureRandom.random_number(1000)
+
     @publish_date = publish_date
     @archived = archived
   end
@@ -32,7 +33,7 @@ class Item
   private
 
 
- def can_be_archived?
+  def can_be_archived?
     temp_date = Time.parse(@publish_date)
     Time.new.year - temp_date.year > 10
   end

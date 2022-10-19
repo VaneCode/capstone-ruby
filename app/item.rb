@@ -4,7 +4,7 @@ class Item
   attr_reader :id, :genre, :author, :source, :label, :archived
   attr_accessor :publish_date
 
-  def initialize(publish_date:, archived:)
+  def initialize(publish_date:, archived: false)
     @id = SecureRandom.random_number(1000)
     @publish_date = publish_date
     @archived = archived
@@ -27,15 +27,13 @@ class Item
   end
 
   def move_to_archive
-    @archived = true if can_be_archieved?
+    @archived = true if can_be_archived?
   end
 
   private
 
-  def can_be_archieved?
+  def can_be_archived?
     temp_date = Time.parse(@publish_date)
     Time.new.year - temp_date.year > 10
   end
 end
-# item = Item.new(publish_date: '1990-01-20', archived: false)
-# item.move_to_archive

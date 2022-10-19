@@ -6,11 +6,12 @@ Create Table games (
     last_played_At DATE 
     publish_date DATE
     Archived BOOLEAN
-    item_id INT FOREIGN KEY REFERENCE item(id)
+    item_id INT FOREIGN KEY REFERENCES item(id)
 )
 
 Create Table author (
     id serial PRIMARY KEY
     first_name VARCHAR(50)
     last_name VARCHAR(50)
+    item_id INT FOREIGN KEY REFERENCES item(id)
 )

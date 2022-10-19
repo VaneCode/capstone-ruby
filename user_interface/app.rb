@@ -33,7 +33,7 @@ class App
   def run_choice(choice)
     case choice
     when 1 then Book.list_books(@books)
-    when 2 then Music_Album.list_albums(@music_albums)
+    when 2 then MusicAlbum.list_albums(@music_albums)
     when 3 then Game.list_games(@games)
     when 4 then puts 'list all genres'
     when 5 then Label.list_labels(@books)

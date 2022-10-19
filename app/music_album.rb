@@ -1,6 +1,5 @@
 require_relative 'item'
-require './app/save_music_album_data'
-require './app/genre'
+require_relative 'genre'
 
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date

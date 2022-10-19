@@ -1,0 +1,38 @@
+[
+  {
+    "id": 733,
+    "publish_date": "2004-03-30",
+    "cover_state": "good",
+    "publisher": "trilce",
+    "archived": false,
+    "label": {
+      "id": 495,
+      "title": "Little wing",
+      "color": "orange"
+    }
+  },
+  {
+    "id": 179,
+    "publish_date": "2013-01-24",
+    "cover_state": "good",
+    "publisher": "aquilar",
+    "archived": false,
+    "label": {
+      "id": 635,
+      "title": "Guia para un perro feliz",
+      "color": "white-blue"
+    }
+  },
+  {
+    "id": 158,
+    "publish_date": "2018-04-17",
+    "cover_state": "good",
+    "publisher": "Pinguin readers",
+    "archived": false,
+    "label": {
+      "id": 2,
+      "title": "Coding",
+      "color": "black"
+    }
+  }
+]

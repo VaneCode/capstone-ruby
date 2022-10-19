@@ -1,11 +1,15 @@
 require 'securerandom'
 require 'time'
+require_relative 'label'
+require_relative 'genre'
+require_relative 'author'
 class Item
-  attr_reader :id, :genre, :author, :source, :label, :archived
+  attr_reader :id, :genre, :author, :label, :archived
   attr_accessor :publish_date
 
-  def initialize(publish_date:, archived: false)
-    @id = SecureRandom.random_number(1000)
+  def initialize(publish_date:, archived: false, id: nil)
+    @id = id || SecureRandom.random_number(1000)
+
     @publish_date = publish_date
     @archived = archived
   end
@@ -18,10 +22,6 @@ class Item
     @author = author
   end
 
-  def add_source(source)
-    @source = source
-  end
-
   def add_label(label)
     @label = label
   end
@@ -31,6 +31,7 @@ class Item
   end
 
   private
+
 
   def can_be_archived?
     temp_date = Time.parse(@publish_date)

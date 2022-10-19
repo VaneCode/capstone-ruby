@@ -14,6 +14,16 @@ class Author
       @items << item unless @item.include?(item)
       item.add_author(self)
     end
+
+    def self.add_author (first_name, last_name)
+      print 'Please enter the first-name of the author'
+      first_name = gets.chomp
+      print 'Please enter the last-name of the author'
+      last_name = gets.chomp
+      new(first_name, last_name)
+    end
+  
+    
   
     
   end

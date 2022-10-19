@@ -24,7 +24,22 @@ class Game < Item
     games << game
   end
 
-  
+  def self.list_all_games(games)
+    if games.empty?
+      puts "You don't have games"
+    else
+      games.each do |_game|
+        puts "name: \"#{games.name}\" publish_date: #{games.publish_date}
+          mutiplayer: #{games.multiplayer} last_played_at: #{games.last_played_at}"
+      end
+    end
+  end
+
+  private
+
+  def can_be_archived?
+    super && Date.today - Date.parse(@last_played) > 2 * 365
+  end
   
 end
 game = Game.new(name: 'Solatire', publish_date: '2022/10/9', multiplayer: true, last_played_at: '2018/10/10')

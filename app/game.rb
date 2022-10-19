@@ -11,7 +11,7 @@ class Game < Item
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
-  
+
   def self.add_game(games)
     print 'Please enter the name of the game'
     name = gets.chomp
@@ -41,7 +41,6 @@ class Game < Item
   def can_be_archived?
     super && Date.today - Date.parse(@last_played) > 2 * 365
   end
-  
 end
 game = Game.new(name: 'Solatire', publish_date: '2022/10/9', multiplayer: true, last_played_at: '2018/10/10')
 puts game.publish_date

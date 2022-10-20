@@ -17,7 +17,7 @@ class Game < Item
     puts "Please enter the game's data"
     print 'Publishing date [DD/MM/YYYY]:'
     publish_date = gets.chomp
-    multiplayer = Validation.valid_yes_no("Multiplayer [Y/N]: ")
+    multiplayer = Validation.valid_yes_no('Multiplayer [Y/N]: ')
     print 'Last played date [DD/MM/YYYY]:'
     last_played_at = gets.chomp
     game = Game.new(publish_date: publish_date, multiplayer: multiplayer == 'Y', last_played_at: last_played_at)

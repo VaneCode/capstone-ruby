@@ -19,7 +19,7 @@ module Validation
   def self.valid_yes_no(msg)
     on_userchoice = ''
     until %w[Y N].include?(on_userchoice)
-      print "#{msg}"
+      print msg.to_s
       on_userchoice = gets.chomp.capitalize
     end
   end

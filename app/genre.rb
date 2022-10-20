@@ -16,9 +16,13 @@ class Genre
   end
 
   def self.list_genres(genres)
-    puts 'List of Genres'
-    genres.each_with_index do |genre, index|
-      puts "#{index + 1}): #{genre.name}"
+    if genres.empty?
+      puts "You don't have genres at the moment."
+    else
+      puts 'List of Genres'
+      genres.each_with_index do |genre, index|
+        puts "#{index + 1}): #{genre.name}"
+      end
     end
   end
 

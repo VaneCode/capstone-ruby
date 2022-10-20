@@ -27,10 +27,14 @@ class MusicAlbum < Item
   end
 
   def self.list_albums(music_albums)
-    puts 'List of Albums'
-    music_albums.each_with_index do |album, idx|
-      aviable = album.on_spotify ? 'yes' : 'no'
-      puts "#{idx + 1}) Publishing date: #{album.publish_date}, genre: #{album.genre.name},aviable on spotify: #{aviable}."
+    if music_albums.empty?
+      puts "You don't music albums at that moment."
+    else
+      puts 'List of Albums'
+      music_albums.each_with_index do |album, idx|
+        aviable = album.on_spotify ? 'yes' : 'no'
+        puts "#{idx + 1}) Publishing date: #{album.publish_date}, genre: #{album.genre.name},aviable on spotify: #{aviable}."
+      end
     end
   end
 end

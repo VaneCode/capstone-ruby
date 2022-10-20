@@ -12,7 +12,7 @@ class App
     @books = []
     @music_albums = []
     @genres = []
-    @movies = []
+    @games = []
   end
 
   def read_data
@@ -40,7 +40,7 @@ class App
     when 6 then puts 'list all authors'
     when 7 then Book.add_book(@books)
     when 8 then MusicAlbum.create_album(@music_albums, @genres)
-    when 9 then Game.add_game(@game)
+    when 9 then Game.add_game(@games)
     when 10
       puts 'Bye ;)'
       save_data

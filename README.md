@@ -1,23 +1,40 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-# Project Name
+# Catalog of my things
 
-> Description the project.
+> A console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but you will also prepare a database with tables structure analogical to your program's class structure.
 
 ## Built With
 
 - Ruby
-- Visual Studio Code
-- Linters: Rubocop
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Terminal
+- Rspec for testing
+- Rubocop (linters)
 
 
 ## Getting Started
+-To get a local copy up and running follow these simple example steps.
 
-To get a local copy up and running follow these simple example steps.
+### Install
+In your terminal, navigate to your current directory and run this code:
+ https://github.com/VaneCode/capstone-ruby.git
+
+-Locate the directory in your file explorer
+
+-cd schoo-library
+
+-Install Rubocop using...
+  bundle install
+  
+For  Rspec you need to install the rspec gem using :
+  gem install rspec
+
+### Run Linters:
+-To run rubocop we use...
+   rubocop .
+
+-To autocorrect offenses with rubocop we use:
+   rubocop --auto-correct-all or rubocop -A
 
 ### Prerequisites
 
@@ -52,6 +69,7 @@ git clone https://github.com/VaneCode/metrics-webapp.git
 
 -Once you have your repository cloned on your machine, feel free to modify it as needed.
 
+
 ## Authors
 
 👤 **Vanessa Bonito**
@@ -60,23 +78,18 @@ git clone https://github.com/VaneCode/metrics-webapp.git
 - Twitter: [@BonitoNarvaez](https://twitter.com/BonitoNarvaez)
 - LinkedIn: [Vanessa Bonito Narváez](https://www.linkedin.com/in/vanessa-bonito-narvaez/)
 
-👤 **Author2**
+👤 **Natasha Tatenda Chirombe**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@NATASHA-ct]((https://github.com/NATASHA-ct)
+- Twitter: [@NatashaChirombe]
+- LinkedIn: [Natasha Chirombe](linkedin.com/in/natasha-chirombe-1531aa17b)
 
-👤 **Author3**
+👤 **Ijeoma Odinko**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: @ijeomaodinko
+- Twitter: @pureblog
+- LinkedIn: ijeomaodinko
 
-👤 **Author4**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 

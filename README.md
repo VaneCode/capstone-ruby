@@ -1,23 +1,50 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-# Project Name
+# Catalog of my things
 
-> Description the project.
+> A console app that will help you to keep a record of different types of things you own: books, music albums, and games. The data will be stored in JSON files but you will also find a database with tables structure analogical to the program's class structure.
 
 ## Built With
 
 - Ruby
-- Visual Studio Code
-- Linters: Rubocop
+- Terminal
+- Rspec for testing
+- Rubocop (linters)
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+### Features
+1) List all books
+2) List all music albums
+3) List all games
+4) List all genres
+5) List all labels
+6) List all authors
+7) Add a book
+8) Add a music album
+9) Add a game
 
 ## Getting Started
+-To get a local copy up and running follow these simple example steps.
 
-To get a local copy up and running follow these simple example steps.
+### Install
+In your terminal, navigate to your current directory and run this code:
+ https://github.com/VaneCode/capstone-ruby.git
+
+-Locate the directory in your file explorer
+
+-cd schoo-library
+
+-Install Rubocop using...
+  bundle install
+  
+For  Rspec you need to install the rspec gem using :
+  gem install rspec
+
+### Run Linters:
+-To run rubocop we use...
+   rubocop .
+
+-To autocorrect offenses with rubocop we use:
+   rubocop --auto-correct-all or rubocop -A
 
 ### Prerequisites
 
@@ -38,19 +65,22 @@ If you don't have Ruby, you can find a complete list of ways to install Ruby, in
 
 If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 
-[Download the ZIP from this location](https://github.com/VaneCode/metrics-webapp/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
+[Download the ZIP from this location](https://github.com/VaneCode/capstone-ruby/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
 ```bash
-git clone https://github.com/VaneCode/metrics-webapp.git
+git clone https://github.com/VaneCode/capstone-ruby.git
 ```
 
-- Open the [Repository Link](https://github.com/VaneCode/metrics-webapp) of this project in GitHub.
+- Open the [Repository Link](https://github.com/VaneCode/capstone-ruby) of this project in GitHub.
 
-- Once the files are on your machine, open metrics-webapp folder in [Visual Studio Code](https://code.visualstudio.com/).
+- Once the files are on your machine, open capstone-ruby folder in [Visual Studio Code](https://code.visualstudio.com/).
 
 ### Usage
 
 -Once you have your repository cloned on your machine, feel free to modify it as needed.
+
+### Quick view of the project
+
 
 ## Authors
 
@@ -60,23 +90,18 @@ git clone https://github.com/VaneCode/metrics-webapp.git
 - Twitter: [@BonitoNarvaez](https://twitter.com/BonitoNarvaez)
 - LinkedIn: [Vanessa Bonito Narváez](https://www.linkedin.com/in/vanessa-bonito-narvaez/)
 
-👤 **Author2**
+👤 **Natasha Tatenda Chirombe**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@NATASHA-ct]((https://github.com/NATASHA-ct)
+- Twitter: [@NatashaChirombe]
+- LinkedIn: [Natasha Chirombe](linkedin.com/in/natasha-chirombe-1531aa17b)
 
-👤 **Author3**
+👤 **Ijeoma Odinko**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: @ijeomaodinko
+- Twitter: @pureblog
+- LinkedIn: ijeomaodinko
 
-👤 **Author4**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 

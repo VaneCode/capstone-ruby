@@ -1,0 +1,26 @@
+[
+  {
+    "id": 765,
+    "publish_date": "12/03/2018",
+    "on_spotify": false,
+    "genre": {
+      "name": "Rock"
+    }
+  },
+  {
+    "id": 594,
+    "publish_date": "01/02/2022",
+    "on_spotify": true,
+    "genre": {
+      "name": "Pop"
+    }
+  },
+  {
+    "id": 156,
+    "publish_date": "12/08/2021",
+    "on_spotify": true,
+    "genre": {
+      "name": "Naija"
+    }
+  }
+]

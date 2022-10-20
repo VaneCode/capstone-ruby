@@ -1,0 +1,74 @@
+[
+  {
+    "id": 733,
+    "publish_date": "2004-03-30",
+    "cover_state": "good",
+    "publisher": "Trilce",
+    "archived": false,
+    "label": {
+      "id": 495,
+      "title": "Little wing",
+      "color": "orange"
+    }
+  },
+  {
+    "id": 179,
+    "publish_date": "2013-01-24",
+    "cover_state": "good",
+    "publisher": "Aguilar",
+    "archived": false,
+    "label": {
+      "id": 635,
+      "title": "Guia para un perro feliz",
+      "color": "white-blue"
+    }
+  },
+  {
+    "id": 158,
+    "publish_date": "2018-04-17",
+    "cover_state": "good",
+    "publisher": "Pinguin readers",
+    "archived": false,
+    "label": {
+      "id": 2,
+      "title": "Coding",
+      "color": "black"
+    }
+  },
+  {
+    "id": 423,
+    "publish_date": "30/12/2013",
+    "cover_state": "good",
+    "publisher": "Aguilar",
+    "archived": false,
+    "label": {
+      "id": 334,
+      "title": "Happy days",
+      "color": "yellow"
+    }
+  },
+  {
+    "id": 724,
+    "publish_date": "12/02/1980",
+    "cover_state": "bad",
+    "publisher": "W",
+    "archived": false,
+    "label": {
+      "id": 328,
+      "title": "Little mermaid",
+      "color": "green"
+    }
+  },
+  {
+    "id": 510,
+    "publish_date": "23/07/2020",
+    "cover_state": "good",
+    "publisher": "Trisal",
+    "archived": false,
+    "label": {
+      "id": 583,
+      "title": "Life can be crazy",
+      "color": "magenta"
+    }
+  }
+]

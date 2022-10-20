@@ -1,0 +1,38 @@
+[
+  {
+    "id": 688,
+    "publish_date": "12/02/2018",
+    "last_played_at": "03/04/2021",
+    "multiplayer": true,
+    "archived": false,
+    "author": {
+      "id": 370,
+      "first_name": "Aron",
+      "last_name": "Helu"
+    }
+  },
+  {
+    "id": 268,
+    "publish_date": "20/01/2005",
+    "last_played_at": "20/12/2019",
+    "multiplayer": false,
+    "archived": false,
+    "author": {
+      "id": 174,
+      "first_name": "Dante",
+      "last_name": "Smith"
+    }
+  },
+  {
+    "id": 730,
+    "publish_date": "09/03/2019",
+    "last_played_at": "26/06/2020",
+    "multiplayer": true,
+    "archived": false,
+    "author": {
+      "id": 987,
+      "first_name": "Davido",
+      "last_name": "Mushonga"
+    }
+  }
+]

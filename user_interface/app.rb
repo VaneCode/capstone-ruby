@@ -4,6 +4,7 @@ require_relative '../app/game'
 require_relative '../app/label'
 require_relative '../app/save_book_data'
 require_relative '../app/save_music_album_data'
+require_relative '../app/save_game_data'
 require_relative 'options'
 
 class App
@@ -20,16 +21,14 @@ class App
     SaveBookData.read_books(@books)
     SaveMusicData.read_music(@music_albums)
     SaveMusicData.read_genres(@genres)
-    # SaveGameData.read_games(@games)
+    SaveGameData.read_games(@games)
   end
 
   def save_data
     SaveBookData.write_books(@books)
     SaveMusicData.write_music(@music_albums)
     SaveMusicData.write_genre(@genres)
-    # SaveGameData.write_games(@games)
-    # save_genre(@genres)
-    # save_music(@music_album)
+    SaveGameData.write_games(@games)
   end
 
   def run_choice(choice)

@@ -1,53 +1,62 @@
 require 'json'
+require_relative 'game'
+require_relative 'author'
 
-module SaveGame
-    def self.save_game(games)
-        game_json = []
-        games.each do |game|
-          save_game  = { name: game.name, publish_date: game.publish_date,
-           mutiplayer: game.multiplayer,  last_played_at: game.last_played_at }
-        game_json << save_game
-        end
-        File.write('games.json', JSON.generate(game_json))
+class SaveGameData
+  DATA_DIRECTORY = './data_json/'.freeze
+
+  def self.author_to_object(author)
+    Author.new(author['first_name'], author['last_name'], author['id'])
+  end
+
+  def self.author_to_json(author)
+    {
+      id: author.id,
+      first_name: author.first_name,
+      last_name: author.last_name
+    }
+  end
+
+  def self.game_to_object(game)
+    author = author_to_object(game['author'])
+    game = Game.new(id: game['id'],
+                    publish_date: game['publish_date'],
+                    last_played_at: game['last_played_at'],
+                    multiplayer: game['multiplayer'])
+    game.add_author(author)
+    game
+  end
+
+  def self.game_to_json(game)
+    {
+      id: game.id,
+      publish_date: game.publish_date,
+      last_played_at: game.last_played_at,
+      multiplayer: game.multiplayer,
+      archived: game.archived,
+      author: author_to_json(game.author)
+    }
+  end
+
+  # Read games
+  def self.read_games(games)
+    path = "#{DATA_DIRECTORY}games.json"
+    return unless File.exist?(path)
+
+    games_file = File.open(path)
+    JSON.parse(games_file.read).each do |game|
+      games << game_to_object(game)
     end
+  end
 
+  # Write games
+  def self.write_games(games)
+    return if games.empty?
 
-    def self.save_authors
-        author_save = []
-   @authors.each do |author|
-       author << {
-           first_name: author.first_name,
-           last_name: author.last_name,
-       Games: author.items.map do |game|
-           {
-               name: game.multiplayer,
-               last_played_at: game.last_played_at,
-               publish_date: game.publish_date
-           }
-         end
-       }
-    end 
-    File.write('author.json', JSON.generate(author_save))
- end
-
- def read_game(games)
-    return books unless File.exist?('game.json')
-   gamearr = JSON.parse(File.read('game.json'))
-   gamearr.each do |game|
-    game_json = Game.new(game['name'], game ['publish_date'], game['multiplayer'], game['last_played_at'])
-    games << game_json
-   end
-end
-
- def read_author (author, games)
-    file = JSON.parse(File.read(author.json))
-    file.each do |author|
-        author = Author.new(author['first_name'])
-        author.last_name = author['last_name']
-        author.items = author ['games'].map do |game|
-        game = Game.new(game['name'], game['last_played_at'], game ['publish_date'])
-        author.json << game
-      author.json << author
- end   
-end 
+    path_file = "#{DATA_DIRECTORY}games.json"
+    data_games = games.map do |game|
+      game_to_json(game)
+    end
+    File.write(path_file, JSON.pretty_generate(data_games))
+  end
 end

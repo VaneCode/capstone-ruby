@@ -5,8 +5,8 @@ require_relative 'validation'
 class MusicAlbum < Item
   attr_accessor :on_spotify, :publish_date
 
-  def initialize(on_spotify:, publish_date:)
-    super(publish_date: publish_date)
+  def initialize(on_spotify:, publish_date:, id: nil)
+    super(publish_date: publish_date, id: id)
     @on_spotify = on_spotify
   end
 

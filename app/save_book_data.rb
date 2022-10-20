@@ -39,7 +39,7 @@ class SaveBookData
     }
   end
 
-  # Read rentals
+  # Read books
   def self.read_books(books)
     path = "#{DATA_DIRECTORY}books.json"
     return unless File.exist?(path)
@@ -50,7 +50,7 @@ class SaveBookData
     end
   end
 
-  # Write rentals
+  # Write books
   def self.write_books(books)
     return if books.empty?
 

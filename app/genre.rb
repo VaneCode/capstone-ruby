@@ -1,11 +1,10 @@
-require './app/save_music_album_data'
 require './app/item'
 
 class Genre
   attr_accessor :items, :name, :id
 
-  def initialize(name)
-    @id = Random.rand(1...1000)
+  def initialize(name, id = nil)
+    @id = id || Random.rand(1...1000)
     @name = name
     @items = []
   end
@@ -19,9 +18,11 @@ class Genre
     if genres.empty?
       puts "You don't have genres at the moment."
     else
+      non_repeat = []
+      genres.each { |genre| non_repeat << genre.name unless non_repeat.include?(genre.name) }
       puts 'List of Genres'
-      genres.each_with_index do |genre, index|
-        puts "#{index + 1}): #{genre.name}"
+      non_repeat.each_with_index do |name, index|
+        puts "#{index + 1}): #{name}"
       end
     end
   end

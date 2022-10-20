@@ -22,7 +22,7 @@ class Label
     if books.empty?
       puts "You don't have labels at this moment."
     else
-      labels = Set.new
+      labels = []
       books.each { |book| labels << book.label }
       puts "You have #{labels.size} labels:"
       labels.each_with_index do |label, index|

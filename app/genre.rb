@@ -28,7 +28,7 @@ class Genre
 
   def self.create_genre(genres)
     print 'Genre: '
-    genre = gets.chomp
+    genre = gets.chomp.capitalize
     genre = Genre.new(genre)
     genres << genre
     genre

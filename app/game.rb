@@ -27,13 +27,14 @@ class Game < Item
     puts 'Your game has been successfully created.'
   end
 
-  def self.list_all_games(games)
+  def self.list_games(games)
     if games.empty?
-      puts "You don't have games"
+      puts "You don't have games at the moment."
     else
-      games.each do |_game|
-        puts "name: \"#{games.name}\" publish_date: #{games.publish_date}
-          mutiplayer: #{games.multiplayer} last_played_at: #{games.last_played_at}"
+      games.each_with_index do |game, idx|
+        multi = game.multiplayer ? 'yes' : 'no'
+        author = game.author.first_name + ' ' + game.author.last_name
+        puts "#{idx + 1}) Game's author: #{author}, mutiplayer: #{multi}, publishig date: #{game.publish_date}, last played at: #{game.last_played_at}"
       end
     end
   end

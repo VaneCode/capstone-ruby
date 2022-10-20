@@ -22,5 +22,6 @@ module Validation
       print msg.to_s
       on_userchoice = gets.chomp.capitalize
     end
+    on_userchoice
   end
 end

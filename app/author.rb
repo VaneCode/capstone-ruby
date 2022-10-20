@@ -16,9 +16,9 @@ class Author
 
   def self.add_author
     print "Author's first-name: "
-    first_name = gets.chomp
+    first_name = gets.chomp.capitalize
     print "Author's last-name: "
-    last_name = gets.chomp
+    last_name = gets.chomp.capitalize
     new(first_name, last_name)
   end
 

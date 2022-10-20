@@ -22,9 +22,14 @@ class Author
     new(first_name, last_name)
   end
 
-  def self.list_all_authors(games)
-    games.each_with_index do |game, idx|
-      puts "#{idx + 1} ) First name: \"#{game.author.first_name}\" Last name: #{game.author.last_name}"
+  def self.list_authors(games)
+    if games.empty?
+      puts "You don't have authors at the moment."
+    else
+      puts 'List of authors'
+      games.each_with_index do |game, idx|
+        puts "#{idx + 1} ) First name: \"#{game.author.first_name}\" Last name: #{game.author.last_name}"
+      end
     end
   end
 end

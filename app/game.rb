@@ -33,8 +33,8 @@ class Game < Item
     else
       games.each_with_index do |game, idx|
         multi = game.multiplayer ? 'yes' : 'no'
-        author = game.author.first_name + ' ' + game.author.last_name
-        puts "#{idx + 1}) Game's author: #{author}, mutiplayer: #{multi}, publishig date: #{game.publish_date}, last played at: #{game.last_played_at}"
+        author = "#{game.author.first_name} #{game.author.last_name}"
+        puts "#{idx + 1}) Game's author: #{author}, mutiplayer: #{multi}, publishig date: #{game.publish_date}, last played at: #{game.last_played_at}."
       end
     end
   end

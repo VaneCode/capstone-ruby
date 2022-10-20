@@ -11,6 +11,16 @@
 - Rspec for testing
 - Rubocop (linters)
 
+### Features
+1) List all books
+2) List all music albums
+3) List all games
+4) List all genres
+5) List all labels
+6) List all authors
+7) Add a book
+8) Add a music album
+9) Add a game
 
 ## Getting Started
 -To get a local copy up and running follow these simple example steps.
@@ -55,30 +65,19 @@ If you don't have Ruby, you can find a complete list of ways to install Ruby, in
 
 If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 
-[Download the ZIP from this location](https://github.com/VaneCode/metrics-webapp/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
+[Download the ZIP from this location](https://github.com/VaneCode/capstone-ruby/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
 ```bash
-git clone https://github.com/VaneCode/metrics-webapp.git
+git clone https://github.com/VaneCode/capstone-ruby.git
 ```
 
-- Open the [Repository Link](https://github.com/VaneCode/metrics-webapp) of this project in GitHub.
+- Open the [Repository Link](https://github.com/VaneCode/capstone-ruby) of this project in GitHub.
 
-- Once the files are on your machine, open metrics-webapp folder in [Visual Studio Code](https://code.visualstudio.com/).
+- Once the files are on your machine, open capstone-ruby folder in [Visual Studio Code](https://code.visualstudio.com/).
 
 ### Usage
 
 -Once you have your repository cloned on your machine, feel free to modify it as needed.
-
-### Features
-1) List all books
-2) List all music albums
-3) List all games
-4) List all genres
-5) List all labels
-6) List all authors
-7) Add a book
-8) Add a music album
-9) Add a game
 
 ### Quick view of the project
 

@@ -1,10 +1,18 @@
 [
   {
-    "id": 286,
-    "publish_date": "2",
+    "id": 765,
+    "publish_date": "12/03/2018",
+    "on_spotify": false,
+    "genre": {
+      "name": "Rock"
+    }
+  },
+  {
+    "id": 594,
+    "publish_date": "01/02/2022",
     "on_spotify": true,
     "genre": {
-      "name": "3"
+      "name": "Pop"
     }
   }
 ]

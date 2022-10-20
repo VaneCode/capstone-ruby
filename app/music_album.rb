@@ -16,8 +16,7 @@ class MusicAlbum < Item
 
   def self.create_album(music_albums, genres)
     puts 'Great! create your music!'
-    print 'Enter the music publish date [00/00/0000]:'
-    publish_date = gets.chomp
+    publish_date = Validation.validation_date('Enter the music publish date')
     on_userchoice = Validation.valid_yes_no('Is it on spotify? [Y/N]: ')
     new_genre = Genre.create_genre(genres)
     album = MusicAlbum.new(publish_date: publish_date, on_spotify: on_userchoice == 'Y')

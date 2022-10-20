@@ -26,9 +26,7 @@ class Book < Item
     # Book
     print 'Publisher:'
     publisher = gets.chomp.capitalize
-    print 'Publishing date [0000/00/00]: '
-    published_date = gets.chomp
-    # published_date = Validation.valid_date('Publishing date')
+    published_date = Validation.validation_date('Publishing date')
     print "Cover's state [good/bad]: "
     cover_state = gets.chomp.downcase
     # Label

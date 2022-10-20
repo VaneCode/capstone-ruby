@@ -1,19 +1,20 @@
 require 'date'
 
 module Validation
-  def self.valid_date(msg)
-    date_format = '%d/%m/%Y'
+  def self.validation_date(msg)
     valid = false
     while valid != true
-      print "#{msg} [DD/MM/YYYY]:"
-      date = gets.chomp
-      valid = begin
+      begin
+        print "#{msg} [DD/MM/YYYY]:"
+        date = gets.chomp
         Date.strptime(date, '%d/%m/%Y')
-      rescue StandardError
-        nil
+      rescue ArgumentError
+        puts 'You have input an invalid format date.'
+      else
+        valid = true
+        return date
       end
     end
-    date
   end
 
   def self.valid_yes_no(msg)

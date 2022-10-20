@@ -3,7 +3,7 @@
     "id": 733,
     "publish_date": "2004-03-30",
     "cover_state": "good",
-    "publisher": "trilce",
+    "publisher": "Trilce",
     "archived": false,
     "label": {
       "id": 495,
@@ -15,7 +15,7 @@
     "id": 179,
     "publish_date": "2013-01-24",
     "cover_state": "good",
-    "publisher": "aquilar",
+    "publisher": "Aguilar",
     "archived": false,
     "label": {
       "id": 635,
@@ -45,6 +45,18 @@
       "id": 334,
       "title": "Happy days",
       "color": "yellow"
+    }
+  },
+  {
+    "id": 724,
+    "publish_date": "12/02/1980",
+    "cover_state": "bad",
+    "publisher": "W",
+    "archived": false,
+    "label": {
+      "id": 328,
+      "title": "Little mermaid",
+      "color": "green"
     }
   }
 ]

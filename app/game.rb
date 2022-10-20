@@ -15,11 +15,9 @@ class Game < Item
 
   def self.add_game(games)
     puts "Please enter the game's data"
-    print 'Publishing date [DD/MM/YYYY]:'
-    publish_date = gets.chomp
+    publish_date = Validation.validation_date('Publishing date')
     multiplayer = Validation.valid_yes_no('Multiplayer [Y/N]: ')
-    print 'Last played date [DD/MM/YYYY]:'
-    last_played_at = gets.chomp
+    last_played_at = Validation.validation_date('Last played date')
     game = Game.new(publish_date: publish_date, multiplayer: multiplayer == 'Y', last_played_at: last_played_at)
     author = Author.add_author
     author.add_item(game)

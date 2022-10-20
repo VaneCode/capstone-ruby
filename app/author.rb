@@ -32,7 +32,7 @@ class Author
       end
       puts 'List of authors'
       authors.each_with_index do |author, idx|
-        puts "#{idx + 1} ) First name: \"#{author.first_name}\" Last name: #{author.last_name}"
+        puts "#{idx + 1} ) First name: #{author.first_name} Last name: #{author.last_name}"
       end
     end
   end

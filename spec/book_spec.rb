@@ -3,7 +3,7 @@ require_relative '../app/label'
 
 describe Book do
   before :each do
-    @book = Book.new(publisher: 'Pinguin Readers', cover_state: 'bad', publish_date: '2018-01-20')
+    @book = Book.new(publisher: 'Pinguin Readers', cover_state: 'bad', publish_date: '20/01/2018')
     @label = Label.new(id: nil, title: 'Cookie', color: 'Black')
     @label.add_item(@book)
   end

@@ -15,17 +15,17 @@ class Genre
     item.add_genre(self)
   end
 
-  def list_genres(genres)
+  def self.list_genres(genres)
     puts 'List of Genres'
     genres.each_with_index do |genre, index|
       puts "#{index + 1}): #{genre.name}"
     end
   end
 
-  def create_genre(genres)
-    puts 'Enter the genre name: '
-    music_genre = gets.chomp
-    genre = Genre.new(music_genre)
+  def self.create_genre(genres)
+    print 'Genre: '
+    genre = gets.chomp
+    genre = Genre.new(genre)
     genres << genre
     genre
   end

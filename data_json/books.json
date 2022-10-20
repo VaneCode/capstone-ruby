@@ -34,5 +34,17 @@
       "title": "Coding",
       "color": "black"
     }
+  },
+  {
+    "id": 423,
+    "publish_date": "30/12/2013",
+    "cover_state": "good",
+    "publisher": "Aguilar",
+    "archived": false,
+    "label": {
+      "id": 334,
+      "title": "Happy days",
+      "color": "yellow"
+    }
   }
 ]

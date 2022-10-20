@@ -15,11 +15,11 @@ class Author
   end
 
   def self.add_author
-    print 'Please enter the first-name of the author '
+    print "Author's first-name: "
     first_name = gets.chomp
-    print 'Please enter the last-name of the author '
+    print "Author's last-name: "
     last_name = gets.chomp
-    Author.new(first_name, last_name)
+    new(first_name, last_name)
   end
 
   def self.list_all_authors(games)

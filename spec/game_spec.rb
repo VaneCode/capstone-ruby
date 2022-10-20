@@ -3,16 +3,12 @@ require './app/game'
 
 describe Game do
   before :each do
-    @game = Game.new(name: 'Solatire', publish_date: '2022/09/10', multiplayer: true, last_played_at: '2022/10/09')
+    @game = Game.new( publish_date: '09/10/2022', multiplayer: true, last_played_at: '09/10/2022')
   end
 
   context 'Game class tests' do
     it 'should be instance of game' do
       expect(@game).to be_an_instance_of Game
-    end
-
-    it 'should be the name of the game' do
-      expect(@game.name).to eq 'Solatire'
     end
 
     it 'should be multiplayer true' do

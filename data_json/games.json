@@ -22,5 +22,17 @@
       "first_name": "Dante",
       "last_name": "Smith"
     }
+  },
+  {
+    "id": 730,
+    "publish_date": "09/03/2019",
+    "last_played_at": "26/06/2020",
+    "multiplayer": true,
+    "archived": false,
+    "author": {
+      "id": 987,
+      "first_name": "Davido",
+      "last_name": "Mushonga"
+    }
   }
 ]

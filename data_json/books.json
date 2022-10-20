@@ -58,5 +58,17 @@
       "title": "Little mermaid",
       "color": "green"
     }
+  },
+  {
+    "id": 510,
+    "publish_date": "23/07/2020",
+    "cover_state": "good",
+    "publisher": "Trisal",
+    "archived": false,
+    "label": {
+      "id": 583,
+      "title": "Life can be crazy",
+      "color": "magenta"
+    }
   }
 ]
